@@ -498,5 +498,15 @@
             "November 5th"
         ],
         "correct": "November 5th"
+    },
+    {
+        "question": "In the movie \"V for Vendetta,\" what is the date that masked vigilante \"V\" urges people to remember?",
+        "answers": [
+            "November 4th",
+            "September 5th",
+            "November 6th",
+            "November 5th"
+        ],
+        "correct": "November 5th"
     }
 ]

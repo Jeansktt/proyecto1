@@ -4,15 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>Nombre del juego</h1>
+        <h2 id="pregunta"></h2>
+        <h3 id="resultado"></h3>
     </header>
     <main>
-        <button class="button"><a src="./HTML/game.html">Iniciar juego</a></button>
+        <ul>
+            <li>
+                <button id="r0">
+                    
+                </button>
+            </li>
+            
+            <li>
+                <button id="r1">
+                    
+                </button>
+            </li>
+            
+            <li>
+                <button id="r2">
+                    
+                </button>
+            </li>
+            <li>
+                <button id="r3">
+                    
+                </button>
+            </li>
+        </ul>
+        <ul id="contadores">
+            <li id="aciertos" class="con"></li>
+            <li id="fallos" class="con"></li>
+            <li id="rondas" class="con"></li>
+        </ul>
+        <p id="resCo"></p>    
     </main>
+    <footer>
+        <p>©2023</p>
+    </footer>
+    
+    <script src="/apiDos.js" type="module" ></script>
 </body>
 </html>
