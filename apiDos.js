@@ -8,7 +8,7 @@ let contador = 1;
 
 async function main() {
   try {
-    const response = await fetch('/quiz.json');
+    const response = await fetch('quiz.json');
 
     if (response.ok) {
       const texto = await response.json();

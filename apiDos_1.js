@@ -9,6 +9,8 @@ const aciertos = document.querySelector('#aciertos');
 const fallos = document.querySelector('#fallos');
 const rondas = document.querySelector('#rondas');
 const resultado = document.querySelector('#resultado');
+const cabecera = document.querySelector('#contadores');
+const button = document.querySelector('button');
 
 let acierto = 0;
 let error = 0;
@@ -29,7 +31,7 @@ async function main() {
     respuestaTres.innerHTML = `${questions[index].answers[3]}`;
     aciertos.innerHTML = ` ${acierto}`;
     fallos.innerHTML = ` ${error}`;
-    rondas.innerHTML = `Ronda: ${contador}`;
+    rondas.innerHTML = `${contador}/50`;
 
     const questionMaker = (answerNum) => {
       if (questions[index].answers[answerNum] === questions[index].correct) {
@@ -37,13 +39,13 @@ async function main() {
         contador++;
         index++;
 
-        aciertos.innerHTML = `Aciertos: ${acierto}`;
+        aciertos.innerHTML = `${acierto}`;
       } else {
         error++;
         contador++;
         index++;
 
-        fallos.innerHTML = `Fallos: ${error}`;
+        fallos.innerHTML = `${error}`;
       }
 
       if (index >= 50) {
@@ -54,6 +56,7 @@ async function main() {
         respuestaUno.remove();
         respuestaDos.remove();
         respuestaTres.remove();
+        contadores.remove();
         pregunta.innerHTML = `Su puntuación es de ${acierto} de 50`;
       } else {
         pregunta.innerHTML = `${questions[index].question}`;
@@ -61,7 +64,7 @@ async function main() {
         respuestaUno.innerHTML = `${questions[index].answers[1]}`;
         respuestaDos.innerHTML = `${questions[index].answers[2]}`;
         respuestaTres.innerHTML = `${questions[index].answers[3]}`;
-        rondas.innerHTML = `Ronda: ${contador}`;
+        rondas.innerHTML = `${contador}/50`;
       }
     };
 
@@ -85,3 +88,7 @@ async function main() {
   }
 }
 main();
+
+// ##############################################################################
+// ######################           PRUEBAS           ###########################
+// ##############################################################################

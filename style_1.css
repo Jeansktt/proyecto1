@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+  --background-color: rgba(2, 78, 116, 0.254);
+  --colorGlobosBackground: #ececec;
+  --colorBody: #ddb892;
+  --colorSombras: rgba(0, 0, 0, 0.336);
+  /* #ced4da; */
+  /* ddb892 */
+}
+
+header > ul {
+  display: inline-;
+  align-items: center;
+
+  /* background-color: #; */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 1px;
+  text-align: center;
+
+  background-color: var(--colorBody);
+  border-radius: 40px;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5 rem;
+  padding: 2rem;
+  border: 1px solid black;
+  background-color: #e3dac9;
+  /* var(--colorGlobosBackground); */
+
+  border-radius: 25%;
+  margin-left: 34px;
+  margin-right: 34px;
+  margin-bottom: 3rem;
+}
+
+button {
+  height: 4rem;
+  width: 14rem;
+  margin: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 12px 6px var(--colorSombras);
+  background: var(--colorGlobosBackground);
+}
+
+button:hover {
+  background: rgba(38, 38, 82, 0.435);
+  color: white;
+  height: 4.5rem;
+  width: 14.5rem;
+
+  /* 
+  Verde 29bf12
+    Rojo f40000
+  */
+}
+
+ul {
+  list-style: none;
+}
+
+#contadores {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0 1rem;
+}
+
+.con {
+  margin: 1rem;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+  }
+  img {
+    height: 64px;
+    width: 64px;
+  }
+  header > ul > img {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    background-color: green;
+  }
+}
