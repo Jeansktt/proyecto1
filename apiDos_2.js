@@ -16,12 +16,6 @@ let acierto = 0;
 let error = 0;
 let contador = 1;
 
-let button_correspondiente = [
-  respuestaCero,
-  respuestaUno,
-  respuestaDos,
-  respuestaTres,
-];
 
 async function main() {
   const response = await fetch('./quiz.json');
@@ -43,19 +37,20 @@ async function main() {
     const questionMaker = (answerNum) => {
       setTimeout(() => {
         if (questions[index].answers[answerNum] === questions[index].correct) {
-          // button.style.color = 'white';
-          // button.style.background = 'green';
+          button.style.color = 'white';
+          button.style.background = 'green';
           index++;
           acierto++;
           contador++;
-
+         
           aciertos.innerHTML = `${acierto}`;
         } else {
-          // button.style.color = 'white';
-          // button.style.background = 'red';
+          button.style.color = 'white';
+          button.style.background = 'red';
           index++;
           error++;
           contador++;
+      
 
           fallos.innerHTML = `${error}`;
         }
@@ -81,12 +76,6 @@ async function main() {
         }
       }, 1500);
     };
-
-    if (questionMaker === true) {
-      button.style.background = 'green';
-    } else {
-      button.style.backgroun = 'red';
-    }
 
     respuestaCero.addEventListener('click', () => {
       questionMaker(0);
@@ -133,24 +122,34 @@ setTimeout(() => {
 button.style.color('correct');
 button.style.color('incorrect');
 
-if (aciertos === answerNum) {
+if (aciertos === answerNum){
   button.style.background = 'green';
 } else {
   button.style.background = 'red';
 }
 
-function cambiarColores() {
-  if (posibles_respuestas[i] === pregunta.respuesta) {
-    button_correspondiente[i].style.background = 'green';
-  } else {
-    button_correspondiente[i].style.background = 'red';
-  }
+
+let button_correspondiente = [
+  respuestaCero,
+  respuestaUno,
+  respuestaDos,
+  respuestaTres
+]
+
+function cambiarColores (){
+if (posibles_respuestas[i] === pregunta.respuesta) {
+  button_correspondiente[i].style.background = "green";
+
+} else {
+  button_correspondiente[i].style.background = "red"
+}
   setTimeout(() => {
-    reiniciarColores();
-  }, 2000);
+    reiniciarColores()
+  },2000)
+  
 }
 function reiniciarColores() {
   for (const btn of button_correspondiente) {
-    button.style.background = 'white';
+    button.style.background= "white"
   }
 }
