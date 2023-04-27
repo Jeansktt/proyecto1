@@ -34,38 +34,40 @@ async function main() {
     rondas.innerHTML = `${contador}/50`;
 
     const questionMaker = (answerNum) => {
-      if (questions[index].answers[answerNum] === questions[index].correct) {
-        acierto++;
-        contador++;
-        index++;
+      setTimeout(() => {
+        if (questions[index].answers[answerNum] === questions[index].correct) {
+          index++;
+          acierto++;
+          contador++;
 
-        aciertos.innerHTML = `${acierto}`;
-      } else {
-        error++;
-        contador++;
-        index++;
+          aciertos.innerHTML = `${acierto}`;
+        } else {
+          index++;
+          error++;
+          contador++;
 
-        fallos.innerHTML = `${error}`;
-      }
+          fallos.innerHTML = `${error}`;
+        }
 
-      if (index >= 50) {
-        rondas.remove();
-        aciertos.remove();
-        fallos.remove();
-        respuestaCero.remove();
-        respuestaUno.remove();
-        respuestaDos.remove();
-        respuestaTres.remove();
-        contadores.remove();
-        pregunta.innerHTML = `Su puntuación es de ${acierto} de 50`;
-      } else {
-        pregunta.innerHTML = `${questions[index].question}`;
-        respuestaCero.innerHTML = `${questions[index].answers[0]}`;
-        respuestaUno.innerHTML = `${questions[index].answers[1]}`;
-        respuestaDos.innerHTML = `${questions[index].answers[2]}`;
-        respuestaTres.innerHTML = `${questions[index].answers[3]}`;
-        rondas.innerHTML = `${contador}/50`;
-      }
+        if (index >= 50) {
+          rondas.remove();
+          aciertos.remove();
+          fallos.remove();
+          respuestaCero.remove();
+          respuestaUno.remove();
+          respuestaDos.remove();
+          respuestaTres.remove();
+          contadores.remove();
+          pregunta.innerHTML = `Su puntuación es de ${acierto} de 50`;
+        } else {
+          pregunta.innerHTML = `${questions[index].question}`;
+          respuestaCero.innerHTML = `${questions[index].answers[0]}`;
+          respuestaUno.innerHTML = `${questions[index].answers[1]}`;
+          respuestaDos.innerHTML = `${questions[index].answers[2]}`;
+          respuestaTres.innerHTML = `${questions[index].answers[3]}`;
+          rondas.innerHTML = `${contador}/50`;
+        }
+      }, 1500);
     };
 
     respuestaCero.addEventListener('click', () => {
@@ -92,3 +94,13 @@ main();
 // ##############################################################################
 // ######################           PRUEBAS           ###########################
 // ##############################################################################
+/* /* button.classList.add('correct');
+setTimeout(() => {
+  button.classList.remove('correct');
+}, 3000) */
+
+/* button.classList.add('incorrect');
+
+setTimeout(() => {
+  button.classList.remove('incorrect');
+}, 3000); */

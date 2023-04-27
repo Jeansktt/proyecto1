@@ -1,8 +1,14 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   transition: 0.5s;
+  font-family: 'Londrina Solid';
+  color: rgba(0, 0, 0, 0.907);
 }
 
 html {
@@ -12,12 +18,20 @@ html {
   --colorGlobosBackground: #ececec;
   --colorBody: #ddb892;
   --colorSombras: rgba(0, 0, 0, 0.336);
+
   /* #ced4da; */
   /* ddb892 */
 }
 
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 header > ul {
-  display: inline-;
+  display: flex;
+  justify-content: center;
   align-items: center;
 
   /* background-color: #; */
@@ -64,11 +78,20 @@ button:hover {
   color: white;
   height: 4.5rem;
   width: 14.5rem;
-
-  /* 
+}
+/* 
   Verde 29bf12
     Rojo f40000
   */
+
+button.correct {
+  background-color: green;
+  color: white;
+}
+
+button.incorrect {
+  background-color: red;
+  color: white;
 }
 
 ul {
@@ -85,25 +108,49 @@ ul {
 .con {
   margin: 1rem;
 }
+header {
+  margin-top: 3rem;
+}
 
 @media (min-width: 600px) {
   body {
     background-color: bisque;
     display: grid;
     grid-template-columns: auto;
-    align-items: center;
   }
   img {
     height: 64px;
     width: 64px;
   }
-  header > ul > img {
+
+  div {
     display: flex;
-    justify-content: space-between;
+
+    justify-content: center;
+  }
+  header > ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .imagen {
   }
 }
 @media (min-width: 1200px) {
   body {
-    background-color: green;
+    background-color: #ddb892;
+  }
+  main > ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+  h2 {
+    border: 1px solid black;
+    background-color: #e3dac9;
+
+    border-radius: 20%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 3rem;
   }
 }
