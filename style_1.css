@@ -16,13 +16,15 @@
 html {
   height: 100vh;
   width: 100vw;
-  --background-color: rgba(2, 78, 116, 0.254);
-  --colorGlobosBackground: #ececec;
-  --colorBody: #ddb892;
-  --colorSombras: rgba(0, 0, 0, 0.336);
-
-  /* #ced4da; */
-  /* ddb892 */
+  --background-color: #4997d0;
+  /* rgba(2, 78, 116, 0.254); */
+  --colorGlobosBackground: #4997d0;
+  /* #ececec; */
+  --colorBody: #7b68ee;
+  /* #ddb892; */
+  --colorSombras: #9eb9d4;
+  /* rgba(0, 0, 0, 0.336); */
+  border-radius: 3%;
 }
 
 div {
@@ -81,6 +83,7 @@ button:hover {
   color: white;
   height: 4.5rem;
   width: 14.5rem;
+  text-decoration: underline 6px var(--colorSombras);
 }
 /* 
   Verde 29bf12
@@ -117,7 +120,6 @@ header {
 
 @media (min-width: 600px) {
   body {
-    background-color: bisque;
     display: grid;
     grid-template-columns: auto;
   }
@@ -150,7 +152,6 @@ header {
 }
 @media (min-width: 1200px) {
   body {
-    background-color: #e4bb97;
     /* 24, 88, 97; */
     /* #ddb892; */
   }
