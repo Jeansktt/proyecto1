@@ -31,7 +31,7 @@ header {
   align-items: center;
 }
 img {
-  width: 22rem;
+  width: 25rem;
 }
 
 button {
@@ -97,9 +97,4 @@ ul {
 
 a {
   text-decoration: none;
-}
-@media (min-width: 600px) {
-  img {
-    width: 45rem;
-  }
 }
